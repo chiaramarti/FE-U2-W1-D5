@@ -1,0 +1,97 @@
+/* reset add */
+
+a{
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* _______________________________
+_______H E A D E R _______________
+________________________________ */
+
+header{
+    background-color: #ffc017;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 10em 1em;
+    border-bottom: #191919 solid 1px;
+}
+
+header nav div span{
+    margin-right: 1.5em;
+}
+
+header nav div span a{
+    color: #191919;
+    font-size: 0.9rem;
+}
+
+header nav div button, .hero-section div button{
+    background-color: #191919;
+    font-weight: 700;
+    width: 8em;
+    height: 3em;
+    border-radius: 2em;
+    border-style: none;
+}
+
+header nav div button a, .hero-section div button a{
+    color: aliceblue;
+}
+
+/* _________________________________
+_________  H  E  R  O ______________
+__________________________________ */
+
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-section img{
+    justify-self: flex-end;
+}
+
+.hero-section div{
+    margin-left: 10em;
+    align-self: center;
+}
+
+.hero-section div h1 {
+    font-family: "Spectral", serif;
+    font-size: 7rem;
+    margin-bottom: 0.3em;
+    letter-spacing: -0.07em;
+}
+
+.hero-section div p{
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+    max-width: 70%;
+}
+
+.hero-section div button {
+    width: 16em;
+}
+
+.hero-section div button a{
+    font-size: 1.2rem;
+}
+
+
+
+
+/* ---------------------------------------------------
+----------------   M   A  I  N   ---------------------
+----------------------------------------------------- */
+

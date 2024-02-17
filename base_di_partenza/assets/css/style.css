@@ -18,6 +18,7 @@ ________________________________ */
 
 header{
     background-color: #ffc017;
+    border-bottom: #191919 solid 1px;
 }
 
 header nav{
@@ -38,7 +39,7 @@ header nav div span a{
 
 header nav div button, .hero-section div button{
     background-color: #191919;
-    font-weight: 700;
+    font-weight: 500;
     width: 8em;
     height: 3em;
     border-radius: 2em;
@@ -89,9 +90,80 @@ __________________________________ */
 }
 
 
-
-
 /* ---------------------------------------------------
 ----------------   M   A  I  N   ---------------------
 ----------------------------------------------------- */
 
+main{
+    padding: 3em 10em;
+}
+
+/*______________ TREND SECTION ___________________________*/
+
+.trend-title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.trend-title img{
+    margin-right: 0.6em;
+}
+
+.trend-title h2{
+    font-weight: 500;
+}
+
+/* __________________ TREND CARD ________________________ */
+
+.trend-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trend-content>div {
+    width: 33%;
+    display: flex;
+}
+
+.trend-content .num {
+    font-size: 1.8rem;
+    font-weight:800;
+    opacity: 0.1;
+    margin: 0 0.8em 1em 1em;
+    min-height: 3em;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    color: #9c9b9b;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin: 0.3em 0;
+}
+
+.author img{
+    width: 1.3em;
+    border-radius: 0.2em;
+    margin-right: 0.5em;
+}
+
+.author .brd-50{
+    border-radius: 50%;
+}
+    
+
+.author a{
+    color: #191919;
+    margin: 0 0.3em;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+}
+
+.info img{
+    margin-left: 0.2em;
+}

@@ -176,6 +176,9 @@ __________________________________ */
     font-size: 0.85rem;
 }
 
+.info span{
+    margin: 0 0.2em
+}
 .info img{
     margin-left: 0.3em;
 }
@@ -225,6 +228,7 @@ article>img{
     width: 14em;
     text-align: right;
     margin: 0 2em;
+    object-fit: cover;
 }
 
 .articles-section article button{
@@ -343,3 +347,145 @@ header.scrolled nav div button{
 header.scrolled nav div button a{
     color: #ffffff; 
 }
+
+
+/* _____________________________________________________________
+_______________  M  E  D  I  A    Q  U  E  R  I  E  S ___________
+________________________________________________________________ */
+
+@media  screen and (max-width: 1400px) {
+    header nav{
+        padding: 1.5em 3em 1em;
+    }
+    
+    .hero-section div {
+        margin-left: 3em;
+    }
+
+    .trend-section {
+        padding: 3em 1em 3em 3em;
+    }
+
+    .explore-section {
+        padding: 0 3em;
+    }
+
+    .hero-section div {
+        min-width: 550px;
+    }
+
+    .hero-section div p{
+        min-width: 530px;
+    }
+
+    .trend-content > div {
+        min-width: 400px;
+    }
+
+    .trend-content {
+        justify-content: space-around;
+    }
+
+    .trend-content .info img{
+        display: none;
+    }
+
+    .info {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .explore-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articles-section {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        width: 100%;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .articles-section article {
+        display: flex;
+        margin: 3em 0;
+        max-width: 740px;
+        width: 100%;
+    }
+
+    .navigation-aside {
+        width: 100%;
+        order: 1;
+    }
+
+    .big-foot{
+        display: none;
+    }
+
+    .small-foot{
+        display: block;
+        background-color: #000000;
+        padding: 2em;
+    }
+
+    .small-foot img{
+        width: 200px;
+        margin-bottom: 1em;
+    }
+
+    .small-foot div{
+        width: 100%;
+        padding-top: 1em;
+        border-top: 1px solid white;
+    }
+
+    .small-foot div a{
+        color: white;
+        margin-right: 3em;
+    }
+
+    .small-foot div a:hover{
+        color: #ffc017;
+    }
+
+    article>img{
+        margin: 0 0 0 2em;
+    }
+
+    header nav{
+        padding: 1.3em 1em;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .articles-section p{
+        display: none;
+    }
+
+    .articles-section article div div img{
+        display: none;
+    }
+
+    .articles-section article>img{
+        width: 10em;
+    }
+
+    header nav div span:nth-child(1){
+        display: none;
+    }
+
+    header nav div span:nth-child(2){
+        display: none;
+    }
+
+    header nav div span:nth-child(3){
+        display: none;
+    }
+
+}
+

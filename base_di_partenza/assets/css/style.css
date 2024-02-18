@@ -12,6 +12,9 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+button:hover, a:hover{
+    cursor: pointer;
+}
 /* _______________________________
 _______H E A D E R _______________
 ________________________________ */
@@ -19,6 +22,7 @@ ________________________________ */
 header{
     background-color: #ffc017;
     border-bottom: #191919 solid 1px;
+    
 }
 
 header nav{
@@ -26,6 +30,12 @@ header nav{
     justify-content: space-between;
     padding: 1.5em 10em 1em;
     border-bottom: #191919 solid 1px;
+    position: fixed;
+    top: 0;
+    z-index: 1000; 
+    width: 100%;
+    background-color: #ffc017;
+    transition: background-color 0.6s ease; 
 }
 
 header nav div span{
@@ -57,10 +67,7 @@ __________________________________ */
 .hero-section{
     display: flex;
     justify-content: space-between;
-}
-
-.hero-section img{
-    justify-self: flex-end;
+    margin-top: 80px;
 }
 
 .hero-section div{
@@ -94,11 +101,11 @@ __________________________________ */
 ----------------   M   A  I  N   ---------------------
 ----------------------------------------------------- */
 
-main{
+/*______________ TREND SECTION ___________________________*/
+.trend-section{
+    border-bottom: #72727218 solid 2px;
     padding: 3em 10em;
 }
-
-/*______________ TREND SECTION ___________________________*/
 
 .trend-title{
     display: flex;
@@ -119,6 +126,7 @@ main{
 .trend-content{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -2em;
 }
 
 .trend-content>div {
@@ -131,7 +139,7 @@ main{
     font-weight:800;
     opacity: 0.1;
     margin: 0 0.8em 1em 1em;
-    min-height: 3em;
+    min-height: 3.5em;
 }
 
 .author{
@@ -149,8 +157,9 @@ main{
     margin-right: 0.5em;
 }
 
-.author .brd-50{
+.author .brd-50, .articles-section article .author .brd-50{
     border-radius: 50%;
+    border: 1px rgba(128, 128, 128, 0.293) solid;
 }
     
 
@@ -162,8 +171,175 @@ main{
 .info{
     display: flex;
     align-items: center;
+    color: #9c9b9b;
+    font-weight: 500;
+    font-size: 0.85rem;
 }
 
 .info img{
-    margin-left: 0.2em;
+    margin-left: 0.3em;
+}
+
+.trend-content h3{
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+/* ____________________ E X P L O R E   S E C T I O N ______________ */
+
+
+/* ----------------------------------------------------
+------------ A  R  T  I  C  L  E  S -------------------
+------------------------------------------------------*/
+.explore-section {
+    padding: 0 10em;
+    display: flex;
+}
+
+.articles-section{
+    width: 66%;
+    padding-right: 3em;
+}
+
+.navigation-aside{
+    width: 33%;
+}
+
+.articles-section article{
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0;
+}
+
+.articles-section>article>div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.articles-section article div p{
+    width: 100%;
+}
+
+article>img{
+    width: 14em;
+    text-align: right;
+    margin: 0 2em;
+}
+
+.articles-section article button{
+    border: none;
+    border-radius: 5em;
+    padding: 0.2em 1em 0.3em;
+    color: grey;
+    background-color: #cacaca42;
+    margin: 0.5em;
+}
+
+
+.articles-section>article>div>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.articles-section>article>div>div>div{
+    display: flex;
+    flex-direction: row;
+}
+
+.articles-section>article>div>div>img:hover{
+    cursor: pointer;
+}
+
+.articles-section h3{
+    font-weight: 900;
+    font-size: 1.35rem;
+    line-height: 1.2em;
+}
+
+.articles-section p{
+    color: #7f7f7f;
+    line-height: 1.2em;
+    font-size: 1em;
+}
+
+article h3:hover{
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------
+-------------------  A  S  I  D  E  -------------------
+------------------------------------------------------*/
+
+aside{
+    margin-top:3em;
+}
+
+aside h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* i bottoni con js potrebbero applicare un filter agli 
+articoli per poi riempire dinamicamente
+la pagina */
+
+aside button{
+    background-color: rgb(255, 255, 255);
+    border: #7f7f7f3b 1px solid;
+    border-radius: 0.2em;
+    padding: 0.5em 1em;
+    margin: 0.3em 0.2em; 
+    color: #5f5f5f;
+    font-family: "Roboto", sans-serif;
+}
+
+aside div div{
+    padding: 1em 0 1.5em;
+    margin: 0 0 1.4em;
+    border-bottom: #72727218 solid 2px;
+}
+
+/* ----------------------------------------------------------
+------------------  F  O  O  T  E  R ------------------------
+------------------------------------------------------------ */
+.big-foot{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.big-foot a{
+    color: #5f5f5f;
+    font-size: 0.9rem;
+    margin: 0 1.4em 0.8em 0;
+}
+
+
+.small-foot{
+    display: none;
+}
+
+
+
+
+/* ------------------ ANIMATION ---------------------------- */
+
+header.scrolled nav{
+    background-color: #ffffff;
+    border-bottom: #191919 solid 1px;
+}
+
+header.scrolled nav div span a {
+    color: #191919;
+}
+
+header.scrolled nav div button{
+    background-color: #06d6a0; 
+}
+
+header.scrolled nav div button a{
+    color: #ffffff; 
 }

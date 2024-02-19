@@ -24,17 +24,26 @@ function showPathElements() {
 
 function hideRandomPathElement() {
   showPathElements();
+  const randomIn = [];
 
-  for (i = 1; i < 20; i++) {
+  for (i = 0; i < 20; i++) {
     const randomIndex = Math.floor(Math.random() * pathElements.length);
 
-    pathElements[randomIndex].style.opacity = 0;
-    pathElements[randomIndex].style.transition = "500ms";
+    randomIn.push(randomIndex);
+
+    // pathElements[randomIndex].style.opacity = 0;
+    // pathElements[randomIndex].style.transition = "0.5s";
+  }
+  console.log(randomIn);
+
+  for (i = 0; i < randomIn.length; i++) {
+    pathElements[randomIn[i]].style.opacity = 0;
+    // console.log(numbers[i]);
   }
 }
 function animatePaths() {
   hideRandomPathElement();
-  setTimeout(animatePaths, 500);
+  setTimeout(animatePaths, 1000);
 }
 
 // Inizia l'animazione

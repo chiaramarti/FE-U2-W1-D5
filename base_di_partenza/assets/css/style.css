@@ -70,9 +70,14 @@ __________________________________ */
     margin-top: 80px;
 }
 
-.hero-section div{
+.hero-section div:first-of-type{
     margin-left: 10em;
     align-self: center;
+    width: 40%;
+}
+
+.hero-section div:last-of-type{
+    height: 80%;
 }
 
 .hero-section div h1 {
@@ -95,6 +100,7 @@ __________________________________ */
 .hero-section div button a{
     font-size: 1.2rem;
 }
+
 
 
 /* ---------------------------------------------------
